@@ -1,0 +1,118 @@
+/* Quiz Styles */
+.quiz-intro {
+    background-color: var(--section-background);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.options label:hover {
+    background-color: var(--section-background);
+}
+
+.options input[type="radio"] {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.quiz-results {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-results h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+#feedback {
+    margin-top: 20px;
+}
+
+#feedback p {
+    margin-bottom: 15px;
+}
+
+#feedback strong {
+    color: var(--primary-color);
+}
+
+#retake-quiz {
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .quiz-container,
+    .quiz-results {
+        padding: 20px;
+    }
+
+    .options label {
+        padding: 8px;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}

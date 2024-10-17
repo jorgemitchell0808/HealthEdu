@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 10 Sexuality Education | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SexEd for Year 10</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Your Sexuality Education Hub</h1>
+        <p>Explore, learn, and empower yourself with knowledge about relationships, consent, and personal safety.</p>
+        <a href="#topics" class="cta-button">Explore Topics</a>
+    </section>
+
+    <main>
+       
+
+        <section id="topics" class="topic-grid">
+            <h2>Key Topics</h2>
+            <div class="grid-container">
+                <div class="topic-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sextortion</h3>
+                    <p>Understand the risks and learn how to protect yourself online.</p>
+                    <a href="sextortion.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Sexting</h3>
+                    <p>Explore the risks and responsibilities of digital communication.</p>
+                    <a href="sexting.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Objectifying Women</h3>
+                    <p>Learn about the impact of objectification on relationships and society.</p>
+                    <a href="objectifying_women.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="topic-card">
+                    <i class="fas fa-hand-paper"></i>
+                    <h3>Sexual Assault</h3>
+                    <p>Understand what sexual assault is and how to get support.</p>
+                    <a href="sexual_assault.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-scenario">
+            <h2>Interactive Scenario: What Would You Do?</h2>
+            <div id="scenario-container">
+                <p id="scenario-text">Your friend confides in you that they're being pressured to send intimate photos to their partner. What do you advise?</p>
+                <div id="scenario-options">
+                    <button onclick="checkAnswer('a')">A) Tell them it's no big deal and to go ahead</button>
+                    <button onclick="checkAnswer('b')">B) Advise them to talk to a trusted adult about the situation</button>
+                    <button onclick="checkAnswer('c')">C) Suggest they break up with their partner immediately</button>
+                </div>
+                <p id="scenario-feedback"></p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Student Voices</h2>
+            <div class="testimonial-container">
+                <blockquote>
+                    "This website helped me understand the importance of consent in relationships. It's made me more confident in setting my own boundaries."
+                    <footer>- Alex, Year 10 Student</footer>
+                </blockquote>
+                <blockquote>
+                    "I never realized how serious sexting could be. The information here really opened my eyes to the risks."
+                    <footer>- Sam, Year 10 Student</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="get-help">
+            <h2>Need Support?</h2>
+            <p>If you're dealing with a difficult situation or just need someone to talk to, help is available.</p>
+            <a href="#" class="help-button">Get Help Now</a>
+        </section>
+    </main>
+
+    <footer>
+        
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: jorge@sexed.edu.au</p>
+                <p>Phone: (02) 1234 5678</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jorge Welch, Year 10 Sexuality Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

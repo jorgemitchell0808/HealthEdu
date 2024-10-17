@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your Knowledge | Year 10 Sexuality Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SexEd for Year 10</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quiz-intro">
+            <h1>Test Your Knowledge</h1>
+            <p>Take this quiz to see how much you've learned about important sexuality and relationship topics.</p>
+        </section>
+
+        <section class="quiz-container">
+            <div id="quiz">
+                <!-- Quiz questions will be dynamically inserted here -->
+            </div>
+            <button id="submit-quiz" class="cta-button">Submit Answers</button>
+            <div id="results" style="display: none;">
+                <h2>Your Results</h2>
+                <p>You scored <span id="score"></span> out of <span id="total-questions"></span>.</p>
+                <div id="feedback"></div>
+                <button id="retake-quiz" class="cta-button">Retake Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@year10sexed.edu.au</p>
+                <p>Phone: (02) 1234 5678</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jorge Welch, Year 10 Sexuality Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

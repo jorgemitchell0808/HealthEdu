@@ -1,0 +1,538 @@
+/* General Styles */
+
+main {
+    padding: 40px; /* Adds even even even more padding around the main content */
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --accent-color: #FF4081;
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+    --card-background: #FFFFFF;
+    --section-background: #E0E0E0;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --error-color: #F44336;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+p { margin-bottom: 15px; }
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    display: inline-block; /* Ensures a wider clickable area */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px 15px; /* Increase clickable area */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path-to-your-image.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Grid */
+.topic-grid {
+    padding: 80px 0;
+}
+
+.topic-grid h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.topic-card a {
+    display: inline-block; /* Or block, depending on layout */
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.topic-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Ensures it doesn't block clicks */
+}
+
+.topic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.topic-card:hover::before {
+    opacity: 1;
+}
+
+.topic-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.topic-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+/* Interactive Scenario */
+.interactive-scenario {
+    background-color: var(--section-background);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.interactive-scenario h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+#scenario-container {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#scenario-text {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+#scenario-options button {
+    display: inline-block;
+    width: auto;
+    padding: 12px 24px;
+    margin: 0 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+#scenario-options button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#scenario-feedback {
+    margin-top: 30px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 20px;
+    background-color: var(--card-background);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+blockquote {
+    background-color: var(--section-background);
+    border-left: 5px solid var(--accent-color);
+    padding: 30px;
+    margin: 0;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+blockquote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+blockquote p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+blockquote footer {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Get Help Section */
+.get-help {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.get-help h2 {
+    margin-bottom: 30px;
+}
+
+.help-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.help-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    blockquote {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.topic-card, .interactive-scenario, .testimonials, .get-help {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Additional Styles for Topic Pages */
+.topic-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.topic-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.info-box {
+    background-color: var(--section-background);
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.myth-fact-item {
+    background-color: var(--card-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.myth {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.fact {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.action-steps {
+    background-color: var(--section-background);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.action-steps h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.action-steps ol {
+    padding-left: 20px;
+}
+
+.action-steps li {
+    margin-bottom: 10px;
+}

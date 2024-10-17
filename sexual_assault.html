@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Sexual Assault | Year 10 SexEd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SexEd for Year 10</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero topic-hero">
+            <h1>Understanding Sexual Assault</h1>
+            <p>Learn about consent, prevention, and support for survivors</p>
+        </section>
+
+        <section class="topic-content">
+            <h2>What is Sexual Assault?</h2>
+            <p>Sexual assault is any unwanted sexual behavior or activity that makes the victim feel uncomfortable, frightened, or threatened. It's important to understand what constitutes sexual assault and how to protect yourself and others.</p>
+
+            <div class="info-box">
+                <h3>Types of Sexual Assault</h3>
+                <ul>
+                    <li>Rape</li>
+                    <li>Unwanted touching or groping</li>
+                    <li>Forced kissing</li>
+                    <li>Non-consensual sharing of intimate images</li>
+                    <li>Sexual coercion</li>
+                </ul>
+            </div>
+
+            <h3>Understanding Consent</h3>
+            <p>Consent is a crucial concept in understanding sexual assault. Remember:</p>
+            <ul>
+                <li>Consent must be freely given, not forced or coerced</li>
+                <li>Consent can be withdrawn at any time</li>
+                <li>Silence or lack of resistance does not imply consent</li>
+                <li>A person who is intoxicated, unconscious, or underage cannot give consent</li>
+            </ul>
+
+            <div class="interactive-scenario">
+                <h3>Consent Scenario</h3>
+                <p>Read the scenario and decide if proper consent was given:</p>
+                <p id="consent-scenario">Alex and Sam are at a party. Alex is clearly drunk and can barely stand. Sam, who is sober, suggests they go upstairs to "have some fun." Alex mumbles something that sounds like "okay" and follows Sam upstairs.</p>
+                <button onclick="checkConsent('yes')">Consent was given</button>
+                <button onclick="checkConsent('no')">Consent was not given</button>
+                <p id="consent-result" style="display:none;"></p>
+            </div>
+
+            <h3>Impact on Survivors</h3>
+            <p>Sexual assault can have serious and long-lasting effects on survivors, including:</p>
+            <ul>
+                <li>Physical injuries</li>
+                <li>Emotional trauma and PTSD</li>
+                <li>Depression and anxiety</li>
+                <li>Difficulties in relationships</li>
+                <li>Academic or work performance issues</li>
+            </ul>
+
+            <div class="myths-facts">
+                <h3>Myths vs. Facts about Sexual Assault</h3>
+                <div class="myth-fact-item">
+                    <p class="myth">Myth: Sexual assault is usually committed by strangers.</p>
+                    <p class="fact">Fact: Most sexual assaults are committed by someone known to the survivor, such as a friend, acquaintance, or partner.</p>
+                </div>
+                <div class="myth-fact-item">
+                    <p class="myth">Myth: If a person doesn't fight back, it wasn't really sexual assault.</p>
+                    <p class="fact">Fact: Many survivors freeze or comply out of fear. Lack of physical resistance doesn't mean consent was given.</p>
+                </div>
+                <div class="myth-fact-item">
+                    <p class="myth">Myth: Sexual assault is caused by uncontrollable sexual urges.</p>
+                    <p class="fact">Fact: Sexual assault is about power and control, not sexual desire. Perpetrators make a choice to assault.</p>
+                </div>
+            </div>
+
+            <h3>Bystander Intervention</h3>
+            <p>As a bystander, you can play a crucial role in preventing sexual assault. Here are some intervention techniques:</p>
+            <ol>
+                <li><strong>Direct:</strong> Directly address the situation (e.g., "Hey, leave them alone!")</li>
+                <li><strong>Distract:</strong> Create a distraction to interrupt the situation (e.g., spill a drink, ask for directions)</li>
+                <li><strong>Delegate:</strong> Get help from others (e.g., friends, security, authorities)</li>
+                <li><strong>Delay:</strong> Check in with the person at risk later if you can't act immediately</li>
+            </ol>
+
+            <div class="interactive-scenario">
+                <h3>Bystander Scenario</h3>
+                <p>You're at a party and see your friend Jay being led away by someone they just met. Jay seems very drunk and can barely walk. What would you do?</p>
+                <button onclick="showIntervention('direct')">Directly confront the person</button>
+                <button onclick="showIntervention('distract')">Create a distraction</button>
+                <button onclick="showIntervention('delegate')">Get help from others</button>
+                <p id="intervention-result" style="display:none;"></p>
+            </div>
+
+            <h3>Prevention and Safety</h3>
+            <p>While it's never the survivor's fault, there are steps you can take to reduce the risk of sexual assault:</p>
+            <ul>
+                <li>Trust your instincts and be aware of your surroundings</li>
+                <li>Communicate clearly about your boundaries</li>
+                <li>Look out for your friends and don't leave them alone in vulnerable situations</li>
+                <li>Learn about bystander intervention techniques</li>
+                <li>Avoid excessive alcohol consumption and never leave drinks unattended</li>
+            </ul>
+
+            <div class="action-steps">
+                <h3>Seeking Help</h3>
+                <p>If you or someone you know has experienced sexual assault, it's important to seek help:</p>
+                <ol>
+                    <li>Contact emergency services if you're in immediate danger: 000</li>
+                    <li>Call the National Sexual Assault, Domestic Family Violence Counselling Service: 1800 RESPECT (1800 737 732)</li>
+                    <li>Reach out to a trusted adult, school counselor, or healthcare provider</li>
+                    <li>Consider reporting the incident to the police</li>
+                    <li>Remember, it's not your fault and you're not alone</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="additional-resources">
+            <h2>Support Services and Resources</h2>
+            <ul>
+                <li><a href="https://www.1800respect.org.au/" target="_blank">1800RESPECT</a> - National sexual assault, domestic and family violence counselling service</li>
+                <li><a href="https://www.police.vic.gov.au/sexual-offences-and-child-abuse-investigation-teams" target="_blank">Victoria Police SOCIT</a> - Sexual Offences and Child Abuse Investigation Teams</li>
+                <li><a href="https://www.casahouse.com.au/" target="_blank">CASA House</a> - Centre Against Sexual Assault</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@year10sexed.edu.au</p>
+                <p>Phone: (02) 1234 5678</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jorge Welch, Year 10 Sexuality Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        function checkConsent(answer) {
+            const resultDiv = document.getElementById('consent-result');
+            if (answer === 'no') {
+                resultDiv.innerHTML = "Correct. Alex is too intoxicated to give consent. Being drunk impairs judgment and the ability to make informed decisions. Sam, being sober, should recognize this and not proceed.";
+            } else {
+                resultDiv.innerHTML = "Incorrect. Alex is too intoxicated to give consent. Being drunk impairs judgment and the ability to make informed decisions. Consent must be given by someone who is sober and capable of making an informed choice.";
+            }
+            resultDiv.style.display = 'block';
+        }
+
+        function showIntervention(choice) {
+            const resultDiv = document.getElementById('intervention-result');
+            let message = '';
+            switch(choice) {
+                case 'direct':
+                    message = "Good choice. You could say something like, 'Hey Jay, I need to talk to you about something important.' This directly interrupts the situation and gives you a chance to check on your friend's wellbeing.";
+                    break;
+                case 'distract':
+                    message = "Great idea. You could create a distraction by spilling a drink, starting a dance party, or asking Jay for help with something. This can give you an opportunity to separate Jay from the potential danger.";
+                    break;
+                case 'delegate':
+                    message = "Smart thinking. You could ask other friends to help you intervene, or alert the party host or security if available. Remember, it's okay to call for help if you're concerned about someone's safety.";
+                    break;
+            }
+            resultDiv.innerHTML = message;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
